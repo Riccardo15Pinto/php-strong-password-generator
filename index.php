@@ -1,4 +1,5 @@
 <?php
+$password = $_GET['password'] ?? null;
 
 
 
