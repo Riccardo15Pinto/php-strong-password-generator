@@ -1,18 +1,24 @@
 <?php
+
 session_start();
+
 include __DIR__ . '/includes/functions.php';
+
 $password = $_GET['password'] ?? null;
-if (isset($password) && $password) {
-    header("location:includes/result.php");
-    $new_password = get_random_Password(intval($password));
-    $_SESSION['password'] = $new_password;
-}
 
 $radio = $_GET['radio'] ?? '';
+
 $font = $_GET['font'] ?? '';
+
 $number = $_GET['number'] ?? '';
+
 $symbol = $_GET['symbol'] ?? '';
-var_dump($radio, $font, $number, $symbol);
+
+if (isset($password) && $password) {
+    header("location:includes/result.php");
+    $new_password = get_random_Password($password, $radio);
+    $_SESSION['password'] = $new_password;
+}
 
 ?>
 
@@ -33,7 +39,7 @@ var_dump($radio, $font, $number, $symbol);
             <label for="yes">SI</label>
             <input type="radio" name="radio" id="yes" value="si">
             <label for="no">NO</label>
-            <input type="radio" name="radio" id="no" value="no">
+            <input type="radio" name="radio" id="no" value="">
             <label for="font">LETTERE</label>
             <input type="checkbox" name="font" id="font">
             <label for="number">NUMERI</label>
