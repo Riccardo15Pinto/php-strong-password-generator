@@ -13,6 +13,12 @@ function get_random_Password($length_password)
     return implode($password); //turn the array into a string
 }
 
+if (isset($password)) {
+
+    $new_password = get_random_Password(intval($password));
+}
+
+
 
 
 
