@@ -16,7 +16,7 @@ $symbol = $_GET['symbol'] ?? '';
 
 if (isset($password) && $password) {
     header("location:includes/result.php");
-    $new_password = get_random_Password($password, $radio);
+    $new_password = get_random_Password($password, $radio, $font, $number, $symbol);
     $_SESSION['password'] = $new_password;
 }
 
