@@ -13,6 +13,10 @@ function get_random_Password($length_password, $no_repeat_filter, $big_font_filt
     if ($number_filter) $alphabet_characters = $small_font . ' ' . $big_font . ' ' . $symbol;
     if ($symbol_filter) $alphabet_characters = $small_font . ' ' . $number . ' ' . $big_font;
     if ($big_font_filter && $symbol_filter && $number_filter) $alphabet_characters = $small_font;
+    if ($big_font_filter && $symbol_filter) $alphabet_characters = $small_font . ' ' . $number;
+    if ($big_font_filter && $number_filter) $alphabet_characters = $small_font . ' ' . $symbol;
+    if ($symbol_filter && $number_filter) $alphabet_characters = $small_font . ' ' . $big_font;
+    if ($big_font_filter && $symbol_filter) $alphabet_characters = $small_font . ' ' . $number;
 
     do {
         $alphabet_index = rand(0, $alphabet_Length);
