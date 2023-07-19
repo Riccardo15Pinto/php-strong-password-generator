@@ -36,20 +36,32 @@ if (isset($password) && $password) {
         <h1>Crea la tua Password</h1>
         <form action="">
             <input type="number" name="password" value="<?= $password ?>">
-            <label for="yes">SI</label>
-            <input type="radio" name="radio" id="yes" value="si">
-            <label for="no">NO</label>
-            <input type="radio" name="radio" id="no" value="">
-            <label for="font">LETTERE</label>
-            <input type="checkbox" name="font" id="font">
-            <label for="number">NUMERI</label>
-
-            <input type="checkbox" name="number" id="number">
-            <label for="symbol">SIMBOLI</label>
-
-            <input type="checkbox" name="symbol" id="symbol">
-            <button type="submit">Invia</button>
-            <button type="reset">Reset</button>
+            <div>
+                <h3>Desideri non avere caratteri che si ripetano?</h3>
+                <label for="yes">SI</label>
+                <input type="radio" name="radio" id="yes" value="si">
+                <label for="no">NO</label>
+                <input type="radio" name="radio" id="no" value="">
+            </div>
+            <div>
+                <h3>Desideri non avere lettere maiuscole?</h3>
+                <label for="font">LETTERE</label>
+                <input type="checkbox" name="font" id="font">
+            </div>
+            <div>
+                <h3>Desideri non avere numeri?</h3>
+                <label for="number">NUMERI</label>
+                <input type="checkbox" name="number" id="number">
+            </div>
+            <div>
+                <h3>Desideri non avere caratteri speciali?</h3>
+                <label for="symbol">SIMBOLI</label>
+                <input type="checkbox" name="symbol" id="symbol">
+            </div>
+            <div>
+                <button type="submit">Invia</button>
+                <button type="reset">Reset</button>
+            </div>
         </form>
 
     </main>
