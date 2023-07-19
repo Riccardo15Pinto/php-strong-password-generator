@@ -17,7 +17,15 @@
 
 <body>
     <main>
-
+        <?php if (isset($new_password)) : ?>
+            <div>
+                <h1>La tua password è : <?= $new_password ?></h1>
+            </div>
+        <?php endif ?>
+        <form action="">
+            <input type="number" name="password" value="<?= $password ?>">
+            <button type="submit">Invia</button>
+        </form>
 
     </main>
 </body>
