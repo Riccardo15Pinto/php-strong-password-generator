@@ -25,15 +25,11 @@ if (isset($password) && $password) {
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?? 'Document' ?></title>
-</head>
+<?php include __DIR__ . '/includes/head.php'  ?>
 
 <body>
     <main>
-        <h1>Crea la tua Password</h1>
+        <h1 class="text-primary">Crea la tua Password</h1>
         <form action="">
             <input type="number" name="password" value="<?= $password ?>">
             <div>
