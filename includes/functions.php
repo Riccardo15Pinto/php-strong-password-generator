@@ -28,7 +28,7 @@ function get_random_Password($length_password, $no_repeat_filter, $big_font_filt
         } else {
             $password[] = $char;
         }
-    } while (count($password) < $length_password);
+    } while (count($password) <= $length_password);
 
     return implode($password);
 }
